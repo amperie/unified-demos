@@ -1,3 +1,10 @@
+import os
+import sys
+
+common = os.path.join(os.path.dirname(__file__),"common")
+sys.path.append(os.path.dirname(__file__))
+sys.path.append(common)
+
 import union
 from typing import Annotated
 from unified_wfs import UnifiedTrainedModel
@@ -7,6 +14,8 @@ from common_v1.common_dataclasses import ModelProductionTestResults
 from flytekit import FlyteDirectory
 from union.remote import UnionRemote
 from union import Secret
+import os
+import sys
 
 
 # Configuration parameters

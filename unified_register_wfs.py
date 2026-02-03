@@ -1,3 +1,10 @@
+import os
+import sys
+
+common = os.path.join(os.path.dirname(__file__),"common")
+sys.path.append(os.path.dirname(__file__))
+sys.path.append(common)
+
 from datetime import timedelta
 
 import union
@@ -7,6 +14,8 @@ from unified_wfs import UnifiedTrainedModel, unified_demo_wf, SearchSpace
 from unified_deploy_wfs import ModelProductionTestResultsArtifact
 from unified_deploy_wfs import test_model_for_production
 from unified_deploy_wfs import promote_to_prod_wf
+import os
+import sys
 
 
 trigger_on_trained_model = OnArtifact(

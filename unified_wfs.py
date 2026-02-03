@@ -21,7 +21,6 @@ from common_v1.common_dataclasses import SearchSpace
 from common_v1.common_dataclasses import Hyperparameters
 from common_v1.common_dataclasses import HpoResults
 
-
 # Configuration Parameters
 enable_data_cache = False
 enable_model_cache = False
