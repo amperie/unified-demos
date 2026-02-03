@@ -1,8 +1,8 @@
 admin:
-  endpoint: dns:///demo.hosted.unionai.cloud
+  endpoint: dns:///tryv2.hosted.unionai.cloud
 image:
   builder: remote
 task:
   domain: development
-  org: demo
+  org: tryv2
   project: pablo

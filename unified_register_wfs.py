@@ -18,20 +18,7 @@ trigger_on_test_results = OnArtifact(
 )
 
 
-unified_demo_launch_plan = union.LaunchPlan.get_or_create(
-    unified_demo_wf,
-    name="unified_demo_launch_plan",
-    auto_activate=True,
-    fixed_inputs={
-        "search_space": SearchSpace(
-            max_depth=[10, 20],
-            max_leaf_nodes=[10, 20],
-            n_estimators=[10, 20]
-        ),
-        "fail": False,
-    },
-    schedule=FixedRate(duration=timedelta(minutes=4))
-)
+
 
 evaluate_model_for_prod_lp = union.LaunchPlan.create(
     "unified_evaluate_model_for_prod",
